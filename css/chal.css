@@ -1,0 +1,88 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+.container {
+  width: 294px;
+  height: 307px;
+  margin: 40px auto;
+  text-align: center;
+  position: relative;
+  transition: 1s;
+}
+.container img {
+  width: 294px;
+  height: 250px;
+}
+.container::after {
+  content: "";
+  background-color: #ffffff;
+  text-align: center;
+  width: 172px;
+  line-height: 15px;
+  height: 66px;
+  font-weight: bold;
+  position: absolute;
+  left: 61px;
+  top: 224px;
+  z-index: 3;
+  transition: 1s;
+  box-shadow: #e1e1e1 -2px 2px 3px, #dddddd 1px 2px 2px 0px;
+}
+
+.text::before {
+  content: "somesone";
+  position: absolute;
+  left: 112px;
+  top: 228px;
+  line-height: 38px;
+  color: black;
+  font-weight: bold;
+  z-index: 5;
+}
+.container .text::after {
+  content: "CTO";
+  position: absolute;
+  top: 260px;
+  left: 135px;
+  color: red;
+  z-index: 2;
+  font-weight: bold;
+  z-index: 5;
+}
+.container:hover::after {
+  transform: scaleX(1.7);
+}
+.container::before {
+  content: "";
+  position: absolute;
+  height: 250px;
+  width: 1px;
+  background-color: #0096888f;
+  left: 0px;
+  z-index: 2;
+  transition: 1s;
+  visibility: hidden;
+}
+.container:hover::before {
+  width: 293px;
+  visibility: visible;
+}
+.container:hover {
+  transform: translateY(-20px);
+}
+.outer {
+  width: 320px;
+  height: 360px;
+  margin: 40px auto;
+  text-align: center;
+  position: relative;
+  transition: 1s;
+  padding-top: 2px;
+  border: 1px solid #9e9e9e;
+}
